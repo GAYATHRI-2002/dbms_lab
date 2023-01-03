@@ -110,3 +110,35 @@ mysql> select *from author;
 |       502 | veena | veena@gmail.com | 1122334455 | yes    |
 +-----------+-------+-----------------+------------+--------+
 2 rows in set (0.00 sec)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+mysql> desc language;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| lang_id | int         | NO   | PRI | NULL    |       |
+| name    | varchar(20) | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> insert into language values(1,'english');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into language values(2,'sanskrit');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select *from language;
++---------+----------+
+| lang_id | name     |
++---------+----------+
+|       1 | english  |
+|       2 | sanskrit |
++---------+----------+
+2 rows in set (0.00 sec)
+
+
+
+
+
+
