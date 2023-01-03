@@ -78,4 +78,35 @@ mysql> select *from book;
 2 rows in set (0.00 sec)
 
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+mysql> desc author;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| author_id | int         | NO   | PRI | NULL    |       |
+| name      | varchar(20) | YES  |     | NULL    |       |
+| email     | varchar(20) | YES  |     | NULL    |       |
+| ph_no     | varchar(10) | YES  |     | NULL    |       |
+| status    | varchar(20) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+5 rows in set (0.01 sec)
+
+mysql> select *from author;
+Empty set (0.01 sec)
+
+mysql> insert into author values(501,'delna','delna@gmail.com',9988776655,'yes');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into author values(502,'veena','veena@gmail.com',1122334455,'yes');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select *from author;
++-----------+-------+-----------------+------------+--------+
+| author_id | name  | email           | ph_no      | status |
++-----------+-------+-----------------+------------+--------+
+|       501 | delna | delna@gmail.com | 9988776655 | yes    |
+|       502 | veena | veena@gmail.com | 1122334455 | yes    |
++-----------+-------+-----------------+------------+--------+
+2 rows in set (0.00 sec)
